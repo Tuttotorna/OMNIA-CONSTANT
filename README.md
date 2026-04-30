@@ -1,2 +1,7 @@
-# OMNIA-CONSTANT
-Search for persistent structural constants across measurable systems using OMNIA and OMNIA-INVARIANCE.
+OMNIA-CONSTANT is not a separate theory.
+
+It is the continuation of OMNIA-INVARIANCE.
+
+OMNIA-INVARIANCE compares structural trajectories across domains.
+
+OMNIA-CONSTANT asks whether any measurable relation remains persistent across those trajectories.
