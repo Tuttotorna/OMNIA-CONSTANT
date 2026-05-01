@@ -1,319 +1,287 @@
-# CO-CHANGE TOPOLOGY TEST
+COCHANGE_TOPOLOGY_TEST_RESULT
 
-## Goal
+Objective
 
-Determine whether Ω correlates with:
+Test whether Ω correlates with:
 
-- historical co-evolution patterns
-- structural memory
-- cross-cluster evolutionary jumps
+historical co-change structure
 
-rather than with:
+novelty of file pairings
 
-- churn
-- static dependency centrality
-- file count
-- modular dispersion
+structural surprise
 
----
+co-change topology instability
 
-# Core Hypothesis
 
-Two files may:
+Hypothesis:
 
-- never import each other
-- belong to distant modules
-- appear unrelated statically
-
-but still form a strong evolutionary coupling if they are repeatedly modified together over time.
-
-This experiment tests whether Ω reacts to violations of these historical coupling structures.
-
----
-
-# Main Idea
-
-Instead of building a graph from:
-
-```text
-A imports B
-
-build a graph from:
-
-A changed together with B
-
-across the full commit history.
-
-The resulting graph represents:
-
-historical structural co-evolution
-
-rather than static architecture.
+High Ω windows should contain:
+- more historically unusual file pairings
+- lower co-change density
+- higher evolutionary surprise
+- more cross-cluster structural jumps
 
 
 ---
 
-Experimental Pipeline
+Experimental Setup
 
-STEP 1 — Collect Commit Windows
+Repository:
 
-For each commit:
+django
 
-changed_files = commit.files
+Dataset:
 
-Store all co-occurrences.
+2000 commits
+1999 Ω events
 
+Co-change extraction:
 
----
+usable commits for co-change = 1182
+unique files = 1613
+unique co-change pairs = 26000
+total pair observations = 31455
 
-STEP 2 — Build Co-Change Matrix
+Window configuration:
 
-For every pair:
-
-(A, B)
-
-inside the same commit:
-
-cochange[A][B] += 1
-
-Result:
-
-weighted co-evolution graph
+window_size = 25
+window_step = 10
+total_windows = 198
 
 
 ---
 
-STEP 3 — Build Co-Change Graph
+Metrics Tested
 
-Nodes:
+For each window:
 
-files
+mean_files_per_commit
+unique_files_in_window
+pair_count
+mean_cochange_strength
+max_cochange_strength
+weak_pair_rate
+novel_pair_rate
+historical_surprise
+cochange_density
 
-Edges:
+Definitions:
 
-historical co-change frequency
+mean_cochange_strength
+= average historical frequency of observed file pairs
 
-Edge weight:
+weak_pair_rate
+= fraction of low-frequency co-change pairs
 
-number of co-occurrences
+novel_pair_rate
+= fraction of previously unseen or near-unseen pairs
 
-Optional normalization:
+historical_surprise
+= average -log(P(pair))
 
-weight = shared_commits / total_commits
-
-
----
-
-STEP 4 — Discover Evolutionary Clusters
-
-Run community detection:
-
-Louvain
-
-spectral clustering
-
-Girvan-Newman
-
-
-Goal:
-
-discover historical structural neighborhoods
+cochange_density
+= density of historically established co-change relations
 
 
 ---
 
-STEP 5 — Compute Window Metrics
+Global Correlations
 
-For each Ω window:
-
-1. Intra-Cluster Ratio
-
-Fraction of file changes occurring inside the same historical cluster.
-
-High:
-
-historically coherent evolution
-
-Low:
-
-cross-structural perturbation
+mean_files_per_commit     = -0.003032
+unique_files_in_window    =  0.009489
+pair_count                = -0.042072
+mean_cochange_strength    =  0.023967
+max_cochange_strength     =  0.000000
+weak_pair_rate            =  0.046887
+novel_pair_rate           =  0.052476
+historical_surprise       =  0.072726
+cochange_density          = -0.052476
 
 
 ---
 
-2. Cross-Cluster Jump Rate
+Correlation Strengths
 
-Fraction of co-changes between distant clusters.
+ALL METRICS:
+weak
 
-Candidate strong Ω driver.
-
-
----
-
-3. Evolutionary Distance
-
-Mean graph distance between changed files in the co-change graph.
-
-Measures:
-
-historical incompatibility
+No moderate or strong correlation detected.
 
 
 ---
 
-4. Historical Surprise
+Interpretation
 
-Deviation between:
+Main Result
 
-current co-change pattern
+Ω does NOT correlate strongly with co-change topology v0.
 
-and:
+Specifically:
 
-historical expected pattern
-
-Possible implementation:
-
-surprise = -log(P(current_pattern))
-
-
----
-
-5. Cluster Fragmentation
-
-Measures whether the current window:
-
-breaks stable historical communities
-
-disperses normally coherent regions
-
+Ω is not explained by:
+- pair novelty
+- historical surprise
+- co-change density
+- co-change strength
 
 
 ---
 
-Main Prediction
+Important Methodological Observation
 
-Ω should correlate more strongly with:
+The v0 implementation aggregates all files across an entire window.
 
-cross-cluster evolutionary stress
+This creates artificial pair combinations between files that:
 
-than with:
+- never changed together
+- never appeared in the same commit
+- only coexist inside the sliding window
 
-file count
+Example:
 
-churn
+window 115:
+unique_files = 472
+pair_count = 111156
 
-PageRank
+This causes:
 
-static dependency centrality
+historical_surprise ≈ constant
 
+Observed range:
 
-
----
-
-Deep Interpretation
-
-If confirmed:
-
-Ω is not measuring architecture itself
-
-but:
-
-violation of historical structural memory
+~6.8 to ~7.0
 
 Meaning:
 
-systems possess preferred evolutionary trajectories
+signal compression occurred
 
-and Ω increases when evolution deviates from historically compatible paths.
-
-
----
-
-Strong Theoretical Consequence
-
-This would imply:
-
-Ω is fundamentally temporal
-
-rather than spatial.
-
-Not:
-
-"how the system is built"
-
-but:
-
-"how the system historically evolves"
+The aggregation method diluted commit-level structural information.
 
 
 ---
 
-Expected Outcomes
+High Ω Windows
 
-Weak Result
+Example:
 
-Small correlation increase over static topology metrics.
+window_index = 181
+mean_omega = 0.571988
+historical_surprise = 6.979708
+weak_pair_rate = 0.905473
+novel_pair_rate = 0.904568
 
-Interpretation:
+But similar surprise values also appeared in medium Ω windows.
 
-co-change contains partial Ω information
-
-
----
-
-Strong Result
-
-Moderate or strong correlation between Ω and:
-
-cross-cluster jumps
-
-historical surprise
-
-evolutionary distance
-
-
-Interpretation:
-
-Ω behaves as a detector of structural memory rupture
+No discriminative separation emerged.
 
 
 ---
 
-Failure Condition
+Scientific Conclusion
 
-If correlations remain weak:
+This experiment does NOT support:
 
-Ω is likely not reducible to any known software topology variable
+Ω = historical co-change surprise
 
-which would strengthen its orthogonality.
+at least under:
 
-
----
-
-Suggested Output Files
-
-results/COCHANGE_TOPOLOGY_TEST.json
-results/COCHANGE_TOPOLOGY_TEST.md
-results/COCHANGE_TOPOLOGY_TEST_RESULT.md
+window-level aggregated co-change topology v0
 
 
 ---
 
-Current Status
+Critical Distinction
 
-Previous tests eliminated reduction to:
+This result does NOT prove:
 
-churn
+memory topology is irrelevant
 
-file count
+It only proves:
 
-static centrality
-
-modular breadth
+the current aggregation model failed to isolate the signal
 
 
-The remaining viable direction is:
+---
 
-dynamic historical topology
+Most Likely Failure Source
 
-This is now the primary hypothesis frontier.
+The signal was destroyed by:
+
+window-level pair explosion
+
+instead of measuring:
+
+real commit-level co-change structure
+
+
+---
+
+Recommended Next Step
+
+COMMIT_LEVEL_COCHANGE_SURPRISE_TEST
+
+Instead of:
+
+all files inside a window
+
+Use:
+
+only file pairs that actually changed together
+inside each commit
+
+Then compute:
+
+commit surprise
+→ aggregate afterward
+
+This preserves:
+
+true evolutionary coupling
+
+and avoids synthetic pair inflation.
+
+
+---
+
+Current OMNIA Reduction Status
+
+Candidate Reduction	Result
+
+Churn	Failed
+File Count	Failed
+Module Dispersion	Failed
+Static Centrality	Failed
+Co-Change Topology v0	Failed
+Path Depth	Partial Signal
+
+
+
+---
+
+Current Evidence
+
+The only consistently surviving signal remains:
+
+structural depth
+
+suggesting Ω reacts more strongly to:
+
+depth of perturbation
+
+than to:
+
+historical co-evolution frequency
+
+
+---
+
+Final Status
+
+COCHANGE_TOPOLOGY_TEST v0:
+NEGATIVE RESULT
+
+But:
+
+methodologically informative
+
+and sufficient to justify a refined commit-level model.
