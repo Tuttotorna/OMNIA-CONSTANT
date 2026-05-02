@@ -1,9 +1,3 @@
-Nome file:
-
-papers/COCHANGE_TOPOLOGY_TEST_RESULT.md
-
-Contenuto:
-
 # CO-CHANGE TOPOLOGY TEST v0
 
 ## Goal
