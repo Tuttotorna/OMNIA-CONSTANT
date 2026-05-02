@@ -1,0 +1,9 @@
+Title:
+OMNIA as a Morphological Perturbation Measure for Code Transformations
+
+Abstract:
+This work investigates whether Ω, the structural score used in OMNIA, behaves as a semantic-change detector or as a morphology-sensitive perturbation measure. Across a sequence of controlled and repository-based tests, Ω resisted reduction to common software metrics such as churn, file count, dependency centrality, historical co-change, and control-flow mutation alone. A semantic invariance test produced a critical negative result: semantic-preserving rewrites sometimes generated larger ΔΩ than semantic-changing edits. For example, collapsing an if/else boolean return into return bool(flag) produced high ΔΩ, while changes such as and → or or break → continue produced ΔΩ ≈ 0 under the tested proxy.
+
+This suggests that Ω should not be interpreted as a semantic correctness signal. Instead, the evidence supports a narrower and more defensible interpretation: Ω is sensitive to representational deformation, syntactic restructuring, and morphological changes in code form. In this framing, OMNIA does not ask whether a program still means the same thing; it measures how strongly the observable structure has been transformed.
+
+The result is important because it prevents semantic overclaiming while preserving the value of Ω as a structural diagnostic. A morphology-sensitive score may be useful for evaluating refactoring intensity, representation stability, AI-generated code rewrites, and structural drift in software systems. Future work should test semantic-preserving refactorings, cross-language transformations, and independent runtime-equivalence checks to determine how Ω behaves across representation changes with controlled semantics.
