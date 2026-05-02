@@ -1,5 +1,7 @@
 # OMNIA-CONSTANT
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19970512.svg)](https://doi.org/10.5281/zenodo.19970512)
+
 **OMNIA-CONSTANT** is a post-analysis and falsification repository for the experimental results emerging from **OMNIA-INVARIANCE**.
 
 It investigates whether the observed Ω regions, especially the recurrent Ω≈0.6 corridor, behave as meaningful structural transition regimes or collapse as artifacts of measurement.
