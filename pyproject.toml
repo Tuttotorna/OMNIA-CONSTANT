@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omnia-constant"
+version = "0.1.0"
+description = "Ω-region post-analysis and falsification layer for OMNIA structural measurement."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Massimiliano Brighindi", email = "brighissimo@users.noreply.github.com" }
+]
+license = { file = "LICENSE" }
+keywords = ["omnia", "omega", "falsification", "structural-measurement", "post-analysis"]
+
+[project.urls]
+Repository = "https://github.com/Tuttotorna/OMNIA-CONSTANT"
+DOI = "https://doi.org/10.5281/zenodo.19970512"
+
+[tool.setuptools]
+py-modules = []

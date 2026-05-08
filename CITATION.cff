@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived Zenodo record."
+title: "OMNIA-CONSTANT — Ω-Region Post-Analysis and Falsification Layer"
+authors:
+  - family-names: "Brighindi"
+    given-names: "Massimiliano"
+repository-code: "https://github.com/Tuttotorna/OMNIA-CONSTANT"
+doi: "10.5281/zenodo.19970512"
+version: "0.1.0"
+date-released: "2026-05-08"
+license: "MIT"
