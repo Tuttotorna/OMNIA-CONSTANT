@@ -26,6 +26,8 @@ No universal structural constant is declared.
 
 ---
 
+- [`docs/OMNIA_CONSTANT_PUBLIC_POSITION.md`](docs/OMNIA_CONSTANT_PUBLIC_POSITION.md)
+
 ## Current position
 
 This repository does **not** claim that Ω is a universal constant.
@@ -226,6 +228,42 @@ This prevents unfinished legacy experiment scripts from being interpreted as tes
 - OMNIA-INVARIANCE: https://github.com/Tuttotorna/OMNIA-INVARIANCE
 - OMNIA-VALIDATION: https://github.com/Tuttotorna/OMNIA-VALIDATION
 - OMNIABASE: https://github.com/Tuttotorna/OMNIABASE
+
+---
+
+## Public position
+
+OMNIA-CONSTANT public positioning is documented here:
+
+- [`docs/OMNIA_CONSTANT_PUBLIC_POSITION.md`](docs/OMNIA_CONSTANT_PUBLIC_POSITION.md)
+
+Core thesis:
+
+```text
+A constant is not assumed.
+A constant is measured as persistence.
+```
+
+Core boundary:
+
+```text
+constant != absolute truth
+measurement != inference != decision
+```
+
+Core role:
+
+```text
+OMNIA-CONSTANT studies what remains unchanged across defined transformation regimes.
+```
+
+OMNIA-CONSTANT does not claim metaphysical constants.
+
+It does not claim absolute truth.
+
+It does not decide semantic correctness.
+
+It treats constancy as a measurable structural persistence property.
 
 ---
 
