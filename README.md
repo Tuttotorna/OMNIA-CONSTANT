@@ -26,8 +26,6 @@ No universal structural constant is declared.
 
 ---
 
-- [`docs/OMNIA_CONSTANT_PUBLIC_POSITION.md`](docs/OMNIA_CONSTANT_PUBLIC_POSITION.md)
-
 ## Current position
 
 This repository does **not** claim that Ω is a universal constant.
@@ -264,7 +262,6 @@ It does not claim absolute truth.
 It does not decide semantic correctness.
 
 It treats constancy as a measurable structural persistence property.
-
 ---
 
 ## Citation
