@@ -4,9 +4,43 @@
 
 [![DOI](https://zenodo.org/badge/1225428060.svg)](https://zenodo.org/badge/latestdoi/1225428060)
 
-Release DOI: [10.5281/zenodo.19970512](https://doi.org/10.5281/zenodo.19970512)
+Release DOI:
 
-GitHub release: [OMNIA-CONSTANT v1.0.0 release](https://github.com/Tuttotorna/OMNIA-CONSTANT/releases/tag/v1.0.0)
+    10.5281/zenodo.19970512
+
+Zenodo latest DOI link:
+
+    https://doi.org/10.5281/zenodo.19970512
+
+GitHub release:
+
+    https://github.com/Tuttotorna/OMNIA-CONSTANT/releases/tag/v1.0.0
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19970512.svg)](https://doi.org/10.5281/zenodo.19970512)
+
+**OMNIA-CONSTANT** is a post-analysis and falsification repository for Ω-region behavior observed around OMNIA / OMNIA-INVARIANCE experiments.
+
+Its purpose is not to declare a universal constant.
+
+Its purpose is to test whether recurrent Ω regions behave as structural transition regimes or collapse as measurement artifacts.
+
+Core boundary:
+
+```text
+measurement != inference != decision
+```
+
+OMNIA-CONSTANT is not a truth oracle.
+
+OMNIA-CONSTANT is not a semantic judge.
+
+OMNIA-CONSTANT is not a decision engine.
+
+Decision remains external.
+
+No universal structural constant is declared.
+
+---
 
 ## Current position
 
@@ -201,6 +235,16 @@ This prevents unfinished legacy experiment scripts from being interpreted as tes
 
 ---
 
+## Related repositories
+
+- lon-mirror: https://github.com/Tuttotorna/lon-mirror
+- OMNIA: https://github.com/Tuttotorna/OMNIA
+- OMNIA-INVARIANCE: https://github.com/Tuttotorna/OMNIA-INVARIANCE
+- OMNIA-VALIDATION: https://github.com/Tuttotorna/OMNIA-VALIDATION
+- OMNIABASE: https://github.com/Tuttotorna/OMNIABASE
+
+---
+
 ## Public position
 
 OMNIA-CONSTANT public positioning is documented here:
@@ -271,30 +315,3 @@ measurement != inference != decision
 
     Structural truth = invariance under transformation
     One invariant is not a constant
-
----
-
-## Related repositories
-
-| Repository | Role |
-|---|---|
-| [lon-mirror](https://github.com/Tuttotorna/lon-mirror) | Canonical public entry point |
-| [OMNIA-VALIDATION](https://github.com/Tuttotorna/OMNIA-VALIDATION) | Public validation showroom |
-| [OMNIA](https://github.com/Tuttotorna/OMNIA) | Core structural measurement engine |
-| [OMNIABASE](https://github.com/Tuttotorna/OMNIABASE) | Representation invariance foundation |
-| [omnia-limit](https://github.com/Tuttotorna/omnia-limit) | Stop / continue boundary layer |
-| [OMNIA-RADAR](https://github.com/Tuttotorna/OMNIA-RADAR) | Structural signal detection layer |
-| [OMNIA-INVARIANCE](https://github.com/Tuttotorna/OMNIA-INVARIANCE) | Structural invariance layer |
-| [OMNIA-CONSTANT](https://github.com/Tuttotorna/OMNIA-CONSTANT) | Structural constant candidate layer |
-| [OMNIAMIND](https://github.com/Tuttotorna/OMNIAMIND) | Structural cognition orchestration layer |
-| [OMNIA-THREE-BODY](https://github.com/Tuttotorna/OMNIA-THREE-BODY) | Dynamic divergence stress test |
-| [OMNIA-SECURITY](https://github.com/Tuttotorna/OMNIA-SECURITY) | Bounded structural security diagnostics |
-| [OMNIA-CRYPTO](https://github.com/Tuttotorna/OMNIA-CRYPTO) | Bounded structural crypto diagnostics |
-
----
-
-## Boundary and smoke-test required terms
-
-    not a truth oracle
-    not a semantic judge
-    Decision remains external
