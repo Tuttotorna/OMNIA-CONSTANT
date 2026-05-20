@@ -293,9 +293,3 @@ Its current position is narrow:
 No universal structural constant is declared.
 measurement != inference != decision
 ```
-
-
-## Boundary terms
-
-    Structural truth = invariance under transformation
-    One invariant is not a constant
