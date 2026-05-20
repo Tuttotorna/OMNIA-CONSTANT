@@ -1,21 +1,5 @@
 # OMNIA-CONSTANT
 
-## DOI
-
-[![DOI](https://zenodo.org/badge/1225428060.svg)](https://zenodo.org/badge/latestdoi/1225428060)
-
-Release DOI:
-
-    10.5281/zenodo.19970512
-
-Zenodo latest DOI link:
-
-    https://doi.org/10.5281/zenodo.19970512
-
-GitHub release:
-
-    https://github.com/Tuttotorna/OMNIA-CONSTANT/releases/tag/v1.0.0
-
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19970512.svg)](https://doi.org/10.5281/zenodo.19970512)
 
 **OMNIA-CONSTANT** is a post-analysis and falsification repository for Ω-region behavior observed around OMNIA / OMNIA-INVARIANCE experiments.
