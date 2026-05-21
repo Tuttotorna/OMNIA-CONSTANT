@@ -1,16 +1,35 @@
+<!-- MB-X.01 LON RELEASE:START -->
+
+## MB-X.01 / L.O.N. release state
+
+Repository: Tuttotorna/OMNIA-CONSTANT
+Release tag: v2026.05.21
+Release commit: 82b86e3
+Release DOI: 10.5281/zenodo.20322695
+
+Boundary:
+
+measurement != validation
+validation != orchestration
+orchestration != decision
+decision != measurement
+
+<!-- MB-X.01 LON RELEASE:END -->
+
 # OMNIA-CONSTANT
 
 <!-- ZENODO DOI:START -->
 
 ## DOI
 
-[![DOI](https://zenodo.org/badge/1225428060.svg)](https://zenodo.org/badge/latestdoi/1225428060)
+[![DOI](https://zenodo.org/badge/DOI/10.5281%2Fzenodo.20322695.svg)](https://doi.org/10.5281/zenodo.20322695)
 
 Zenodo DOI badge for this repository.
 
 Repository: Tuttotorna/OMNIA-CONSTANT
 GitHub repository id: 1225428060
-Latest release DOI: pending Zenodo publication or resolved dynamically by Zenodo badge
+Release tag: v2026.05.21
+Latest release DOI: 10.5281/zenodo.20322695
 
 <!-- ZENODO DOI:END -->
 
