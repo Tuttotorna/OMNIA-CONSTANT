@@ -1,0 +1,25 @@
+{
+  "repository": "OMNIA-CONSTANT",
+  "owner": "Tuttotorna",
+  "ecosystem": "MB-X.01 / OMNIA",
+  "role": "Post-analysis and falsification layer for candidate Omega-region behavior.",
+  "status": "experimental adapter",
+  "contract": "Falsification-first analysis; declares no universal structural constant.",
+  "boundary": "measurement != inference != decision",
+  "backbone": [
+    "OMNIA",
+    "omnia-limit",
+    "OMNIA-VALIDATION"
+  ],
+  "satellites": [
+    "OMNIABASE",
+    "OMNIA-RADAR",
+    "OMNIA-SECURITY",
+    "OMNIA-CRYPTO",
+    "OMNIAMIND",
+    "OMNIA-THREE-BODY",
+    "OMNIA-INVARIANCE",
+    "OMNIA-CONSTANT"
+  ],
+  "last_hardening_pass_utc": "2026-05-21T14:03:44Z"
+}

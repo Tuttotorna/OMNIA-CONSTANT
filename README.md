@@ -332,3 +332,13 @@ measurement != inference != decision
     not a truth oracle
     not a semantic judge
     Decision remains external
+
+<!-- OMNIA_ECOSYSTEM_BOUNDARY_V1 -->
+
+## Ecosystem Boundary
+
+```text
+measurement != inference != decision
+```
+
+This repository is part of the MB-X.01 / OMNIA ecosystem. Its outputs must be read as structural measurement, validation, detection, orchestration or adapter artifacts according to the repository role. They are not autonomous semantic truth claims and they do not make external decisions.
