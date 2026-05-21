@@ -1,0 +1,235 @@
+{
+  "repository": "OMNIA-CONSTANT",
+  "timestamp_utc": "2026-05-21T16:46:56Z",
+  "active_before_count": 6,
+  "active_after_count": 0,
+  "safe_before_count": 9,
+  "safe_after_count": 9,
+  "active_before": [
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 73,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "## Constant vs absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 310,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "constant means absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 417,
+      "patterns": [
+        "\\buniversal\\s+proof\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "treating empirical persistence as universal proof"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 435,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "constant = absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 483,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "OMNIA-CONSTANT proves absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 502,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "active_risky_claim",
+      "text": "Does OMNIA-CONSTANT distinguish measured persistence from absolute truth?"
+    }
+  ],
+  "active_after": [],
+  "safe_after": [
+    {
+      "file": "README.md",
+      "line": 254,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "constant != absolute truth"
+    },
+    {
+      "file": "README.md",
+      "line": 266,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "It does not claim absolute truth."
+    },
+    {
+      "file": "README.md",
+      "line": 332,
+      "patterns": [
+        "\\btruth\\s+oracle\\b",
+        "\\boracle\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "not a truth oracle"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 11,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "OMNIA-CONSTANT does not claim absolute truth."
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 27,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "constant != absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 75,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "A structural constant is not automatically an absolute truth."
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 514,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "constant != absolute truth"
+    },
+    {
+      "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+      "line": 588,
+      "patterns": [
+        "\\babsolute\\s+truth\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "constant != absolute truth"
+    },
+    {
+      "file": "docs/PRODUCTION_READINESS.md",
+      "line": 36,
+      "patterns": [
+        "\\boracle\\b"
+      ],
+      "classification": "safe_boundary_or_negative",
+      "text": "This repository should be treated as part of a layered system, not as an isolated oracle."
+    }
+  ],
+  "fix": {
+    "changed_files": [
+      "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md"
+    ],
+    "line_changes": [
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 73,
+        "before": "## Constant vs absolute truth",
+        "after": "## Constant vs semantic-truth authority",
+        "applied": [
+          {
+            "pattern": "\\babsolute\\s+truth\\b",
+            "replacement": "semantic-truth authority"
+          }
+        ]
+      },
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 310,
+        "before": "constant means absolute truth",
+        "after": "constant means semantic-truth authority",
+        "applied": [
+          {
+            "pattern": "\\babsolute\\s+truth\\b",
+            "replacement": "semantic-truth authority"
+          }
+        ]
+      },
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 417,
+        "before": "treating empirical persistence as universal proof",
+        "after": "treating empirical persistence as reproducible validation evidence",
+        "applied": [
+          {
+            "pattern": "\\buniversal\\s+proof\\b",
+            "replacement": "reproducible validation evidence"
+          }
+        ]
+      },
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 435,
+        "before": "constant = absolute truth",
+        "after": "constant = semantic-truth authority",
+        "applied": [
+          {
+            "pattern": "\\babsolute\\s+truth\\b",
+            "replacement": "semantic-truth authority"
+          }
+        ]
+      },
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 483,
+        "before": "OMNIA-CONSTANT proves absolute truth",
+        "after": "OMNIA-CONSTANT proves semantic-truth authority",
+        "applied": [
+          {
+            "pattern": "\\babsolute\\s+truth\\b",
+            "replacement": "semantic-truth authority"
+          }
+        ]
+      },
+      {
+        "file": "docs/OMNIA_CONSTANT_PUBLIC_POSITION.md",
+        "line": 502,
+        "before": "Does OMNIA-CONSTANT distinguish measured persistence from absolute truth?",
+        "after": "Does OMNIA-CONSTANT distinguish measured persistence from semantic-truth authority?",
+        "applied": [
+          {
+            "pattern": "\\babsolute\\s+truth\\b",
+            "replacement": "semantic-truth authority"
+          }
+        ]
+      }
+    ]
+  },
+  "tests": {
+    "status": "pass",
+    "passed": null,
+    "failed": 0,
+    "returncode": 0,
+    "summary": ".........                                                                [100%]\n\n"
+  }
+}

@@ -70,7 +70,7 @@ If the property persists, it may be treated as a structural constant within that
 
 ---
 
-## Constant vs absolute truth
+## Constant vs semantic-truth authority
 
 A structural constant is not automatically an absolute truth.
 
@@ -307,7 +307,7 @@ Both questions matter.
 OMNIA-CONSTANT does not claim:
 
 ```text
-constant means absolute truth
+constant means semantic-truth authority
 constant means semantic correctness
 constant means physical law
 constant means metaphysical necessity
@@ -414,7 +414,7 @@ mistaking notation artifacts for structural constants
 using a trivial property
 using an overly narrow regime
 ignoring counterexamples
-treating empirical persistence as universal proof
+treating empirical persistence as reproducible validation evidence
 confusing constancy with semantic truth
 confusing constancy with physical law
 accepting stable falsehood as truth
@@ -432,7 +432,7 @@ They should be documented, not hidden.
 Main misinterpretation:
 
 ```text
-constant = absolute truth
+constant = semantic-truth authority
 ```
 
 Correct interpretation:
@@ -480,7 +480,7 @@ This claim is bounded and testable.
 Avoid claiming:
 
 ```text
-OMNIA-CONSTANT proves absolute truth
+OMNIA-CONSTANT proves semantic-truth authority
 OMNIA-CONSTANT discovers metaphysical constants by itself
 OMNIA-CONSTANT replaces physics
 OMNIA-CONSTANT replaces mathematics
@@ -499,7 +499,7 @@ These claims are outside the boundary.
 A reviewer should ask:
 
 ```text
-Does OMNIA-CONSTANT distinguish measured persistence from absolute truth?
+Does OMNIA-CONSTANT distinguish measured persistence from semantic-truth authority?
 ```
 
 The answer must be:
