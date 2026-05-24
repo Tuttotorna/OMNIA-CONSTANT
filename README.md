@@ -4,8 +4,6 @@
 
 <!-- OMNIA_CONSTANT_AUDITOR_TOP_START -->
 
-# OMNIA-CONSTANT
-
 ## Concrete entrypoint: OMNIA Constant Auditor
 
 This repository now has a direct operational tool:
@@ -193,12 +191,9 @@ decision != measurement
 
 <!-- MB-X.01 LON RELEASE:END -->
 
-# OMNIA-CONSTANT
-
 <!-- ZENODO DOI:START -->
 
 ## DOI
-
 
 Zenodo DOI badge for this repository.
 
@@ -209,9 +204,7 @@ Latest release DOI: 10.5281/zenodo.20322695
 
 <!-- ZENODO DOI:END -->
 
-
 ## DOI
-
 
 Release DOI: [10.5281/zenodo.19970512](https://doi.org/10.5281/zenodo.19970512)
 
@@ -474,7 +467,6 @@ Its current position is narrow:
 No universal structural constant is declared.
 measurement != inference != decision
 ```
-
 
 ## Boundary terms
 
