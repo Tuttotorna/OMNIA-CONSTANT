@@ -1,3 +1,7 @@
+# OMNIA-CONSTANT
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20369144.svg)](https://doi.org/10.5281/zenodo.20369144)
+
 <!-- OMNIA_CONSTANT_AUDITOR_TOP_START -->
 
 # OMNIA-CONSTANT
@@ -195,7 +199,6 @@ decision != measurement
 
 ## DOI
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281%2Fzenodo.20322695.svg)](https://doi.org/10.5281/zenodo.20322695)
 
 Zenodo DOI badge for this repository.
 
@@ -209,7 +212,6 @@ Latest release DOI: 10.5281/zenodo.20322695
 
 ## DOI
 
-[![DOI](https://zenodo.org/badge/1225428060.svg)](https://zenodo.org/badge/latestdoi/1225428060)
 
 Release DOI: [10.5281/zenodo.19970512](https://doi.org/10.5281/zenodo.19970512)
 
