@@ -5,3 +5,10 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+*.py[cod]
+ci_report/
+constant_report/
+omnia_constant_report/
+omnia_constant_demo_report/
+omnia_constant_gate_report/
+report/

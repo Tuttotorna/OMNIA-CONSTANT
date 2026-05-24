@@ -1,0 +1,4 @@
+{"constant_id":"stable_numeric","context_id":"run_001","value":1.000}
+{"constant_id":"stable_numeric","context_id":"run_002","value":1.001}
+{"constant_id":"stable_symbolic","context_id":"run_001","value":"PASS"}
+{"constant_id":"stable_symbolic","context_id":"run_002","value":"pass"}

@@ -1,3 +1,176 @@
+<!-- OMNIA_CONSTANT_AUDITOR_TOP_START -->
+
+# OMNIA-CONSTANT
+
+## Concrete entrypoint: OMNIA Constant Auditor
+
+This repository now has a direct operational tool:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report
+
+It solves a concrete problem:
+
+    given observations across runs, domains, contexts, or perturbations,
+    measure what remains constant,
+    what drifts,
+    and what ruptures.
+
+In short:
+
+    observations across runs/domains -> constant / drift / rupture report
+
+## What problem does it solve?
+
+A measurement can look stable in one run and fail across repeated observations.
+
+OMNIA-CONSTANT turns this into a reproducible audit:
+
+    group observations by constant_id
+    compare values across contexts
+    measure numeric or structural variation
+    classify each candidate as constant, drift, or rupture
+    emit a reproducible certificate
+    optionally fail CI when rupture appears
+
+## Install
+
+Clone the repository:
+
+    git clone https://github.com/Tuttotorna/OMNIA-CONSTANT.git
+    cd OMNIA-CONSTANT
+
+Install locally:
+
+    pip install -e .
+
+The auditor only uses the Python standard library.
+
+## Run
+
+Run the sample audit:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report
+
+Run and fail if rupture is detected:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report --fail-on-rupture
+
+Run and fail if drift or rupture is detected:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report --fail-on-drift
+
+## Input format
+
+The auditor accepts JSONL.
+
+Required fields:
+
+    constant_id
+    context_id
+    value
+
+Optional fields:
+
+    domain
+    run_id
+    expected
+    note
+
+Example:
+
+    {"constant_id":"omega_floor","context_id":"run_001","value":0.99}
+    {"constant_id":"omega_floor","context_id":"run_002","value":0.98}
+    {"constant_id":"omega_floor","context_id":"run_003","value":0.10}
+
+Classification rule:
+
+    constant = values remain stable within tolerance
+    drift    = values vary but remain partially compatible
+    rupture  = values break beyond the configured rupture threshold
+
+## Output
+
+The auditor writes:
+
+    report.json
+    report.csv
+    report.html
+    drift_constants.jsonl
+    rupture_constants.jsonl
+    certificate.json
+
+Meaning:
+
+    report.json
+    Full structured constant analysis.
+
+    report.csv
+    Spreadsheet-friendly constant summary.
+
+    report.html
+    Human-readable audit report.
+
+    drift_constants.jsonl
+    One JSON object per drifting constant candidate.
+
+    rupture_constants.jsonl
+    One JSON object per ruptured constant candidate.
+
+    certificate.json
+    Reproducibility certificate with thresholds, counts, and boundary statement.
+
+## CI gate
+
+Fail when rupture appears:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report --fail-on-rupture
+
+Fail when drift or rupture appears:
+
+    python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir report --fail-on-drift
+
+Exit codes:
+
+    0 = analysis completed without selected blocking condition
+    2 = drift detected under --fail-on-drift
+    3 = rupture detected under --fail-on-rupture or --fail-on-drift
+    4 = invalid input or measurement error
+
+## What this is not
+
+This is not a metaphysical claim about absolute constants.
+
+It does not decide truth.
+
+It does not infer meaning.
+
+It measures candidate constants inside the supplied observation boundary.
+
+The boundary is explicit:
+
+    measurement only;
+    constant means stability across supplied contexts,
+    not universal semantic truth.
+
+## Why the rest of the repository still matters
+
+The rest of this repository documents the constant concept:
+
+    structural constancy
+    persistence across observation contexts
+    stability under perturbation
+    drift
+    rupture
+    measurement boundary
+
+The code above is the operational entrypoint.
+
+The repository below is the derivation path.
+
+<!-- OMNIA_CONSTANT_AUDITOR_TOP_END -->
+
+---
+
 <!-- MB-X.01 LON RELEASE:START -->
 
 ## MB-X.01 / L.O.N. release state

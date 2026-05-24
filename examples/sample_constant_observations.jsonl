@@ -1,0 +1,12 @@
+{"constant_id":"omega_floor","context_id":"run_001","domain":"numeric","value":0.990,"note":"stable reference"}
+{"constant_id":"omega_floor","context_id":"run_002","domain":"numeric","value":0.988,"note":"stable within tolerance"}
+{"constant_id":"omega_floor","context_id":"run_003","domain":"numeric","value":0.991,"note":"stable within tolerance"}
+{"constant_id":"sei_decay","context_id":"run_001","domain":"numeric","value":0.100,"note":"reference"}
+{"constant_id":"sei_decay","context_id":"run_002","domain":"numeric","value":0.130,"note":"controlled drift"}
+{"constant_id":"sei_decay","context_id":"run_003","domain":"numeric","value":0.145,"note":"still drift, not rupture"}
+{"constant_id":"limit_boundary","context_id":"run_001","domain":"symbolic","value":"STOP","note":"reference"}
+{"constant_id":"limit_boundary","context_id":"run_002","domain":"symbolic","value":"STOP","note":"stable symbolic output"}
+{"constant_id":"limit_boundary","context_id":"run_003","domain":"symbolic","value":"STOP","note":"stable symbolic output"}
+{"constant_id":"observer_anchor","context_id":"run_001","domain":"symbolic","value":"observer suspended","note":"reference"}
+{"constant_id":"observer_anchor","context_id":"run_002","domain":"symbolic","value":"observer preserved","note":"rupture candidate"}
+{"constant_id":"observer_anchor","context_id":"run_003","domain":"symbolic","value":"privileged observer restored","note":"rupture candidate"}

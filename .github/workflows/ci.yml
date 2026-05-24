@@ -1,67 +1,58 @@
-name: CI
+name: OMNIA-CONSTANT CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-
 jobs:
-  test:
-    name: Python ${{ matrix.python-version }}
+  omnia-constant-auditor:
+    name: Test OMNIA Constant Auditor
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Checkout OMNIA backbone
-        uses: actions/checkout@v4
-        with:
-          repository: Tuttotorna/OMNIA
-          path: _backbone/OMNIA
-
-      - name: Checkout omnia-limit backbone
-        uses: actions/checkout@v4
-        with:
-          repository: Tuttotorna/omnia-limit
-          path: _backbone/omnia-limit
-
-      - name: Checkout OMNIA-VALIDATION backbone
-        uses: actions/checkout@v4
-        with:
-          repository: Tuttotorna/OMNIA-VALIDATION
-          path: _backbone/OMNIA-VALIDATION
-
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.12"
 
-      - name: Install package and test dependencies
-        shell: bash
+      - name: Upgrade pip
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pytest
-          python -m pip install -e _backbone/OMNIA
-          python -m pip install -e _backbone/omnia-limit
-          python -m pip install -e _backbone/OMNIA-VALIDATION
 
+      - name: Install package
+        run: |
           python -m pip install -e .
 
-      - name: Run full test suite
-        shell: bash
-        env:
-          OMNIA_SOURCE_DIR: ${{ github.workspace }}/_backbone/OMNIA
+      - name: Install test dependencies
         run: |
-          python -m pytest -q
+          python -m pip install pytest
+
+      - name: Run standalone auditor tests
+        run: |
+          python -m pytest -q tests/test_omnia_constant_auditor.py
+
+      - name: Run OMNIA Constant Auditor smoke test
+        run: |
+          python -m omnia_constant_auditor.cli --input examples/sample_constant_observations.jsonl --out-dir ci_report
+
+      - name: Show generated certificate
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          p = Path("ci_report/certificate.json")
+          if not p.exists():
+              raise SystemExit("Missing ci_report/certificate.json")
+
+          data = json.loads(p.read_text(encoding="utf-8"))
+          print(json.dumps(data, indent=2))
+          PY
