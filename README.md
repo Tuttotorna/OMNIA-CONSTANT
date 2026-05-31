@@ -4,6 +4,25 @@
 
 <!-- OMNIA_CONSTANT_AUDITOR_TOP_START -->
 
+
+## Foundational Principle
+
+OMNIA-CONSTANT is a persistence-focused application of the L.O.N. Multi-Form Invariance Principle:
+
+> No single form is sovereign.
+
+In OMNIA-CONSTANT, this becomes:
+
+> No constant is sovereign unless its persistence survives transformation.
+
+A constant is not trusted because it appears stable in one form, one representation, one scale, or one observation. Its persistence must remain structurally compatible across independent transformations.
+
+OMNIA-CONSTANT exists to distinguish apparent constancy from structural persistence.
+
+See:
+
+- https://github.com/Tuttotorna/lon-mirror/tree/main/foundation
+
 ## Concrete entrypoint: OMNIA Constant Auditor
 
 This repository now has a direct operational tool:
