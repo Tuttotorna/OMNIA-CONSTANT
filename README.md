@@ -556,3 +556,31 @@ Role document:
 
 - [Structural Observability Role](docs/STRUCTURAL_OBSERVABILITY_ROLE.md)
 <!-- STRUCTURAL_OBSERVABILITY_ROLE_END -->
+
+<!-- OMNIA_ZENODO_CITATION_BLOCK_START -->
+
+## Citation and archival
+
+This repository is prepared for GitHub-Zenodo archival.
+
+Repository:
+https://github.com/Tuttotorna/OMNIA-CONSTANT
+
+Latest GitHub release: v0.1.1 (https://github.com/Tuttotorna/OMNIA-CONSTANT/releases/tag/v0.1.1)
+
+Detected Zenodo DOI(s):
+- https://doi.org/10.5281/zenodo.20369144
+- https://doi.org/10.5281/zenodo.20322695
+- https://doi.org/10.5281/zenodo.19970512
+- https://doi.org/10.5281/zenodo.20379374
+
+Metadata files used for archival/citation:
+
+- .zenodo.json
+- CITATION.cff
+
+Zenodo note:
+
+GitHub-Zenodo archiving works after the repository is enabled in Zenodo GitHub settings and a GitHub release is created.
+
+<!-- OMNIA_ZENODO_CITATION_BLOCK_END -->

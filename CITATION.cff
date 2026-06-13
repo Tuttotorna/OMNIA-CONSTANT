@@ -1,28 +1,11 @@
 cff-version: 1.2.0
-message: "If you use OMNIA-CONSTANT or OMNIA Constant Auditor, please cite this archived release."
-title: "OMNIA-CONSTANT: Candidate Constant Auditing Across Observation Contexts"
-version: "0.1.1"
-date-released: "2026-05-24"
-doi: "10.5281/zenodo.20369144"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.20369144"
+message: "If you use this software, please cite it using the metadata from this file."
+title: "OMNIA-CONSTANT: OMNIA Structural Observability Repository"
 authors:
   - family-names: "Brighindi"
     given-names: "Massimiliano"
-repository-code: "https://github.com/Tuttotorna/OMNIA-CONSTANT"
+    affiliation: "Independent researcher"
+version: "v0.1.1"
+date-released: 2026-06-13
 url: "https://github.com/Tuttotorna/OMNIA-CONSTANT"
-license: "MIT"
-abstract: "OMNIA-CONSTANT provides a standalone OMNIA Constant Auditor for measuring whether candidate constants remain stable across supplied observation contexts. The tool reads JSONL constant, context, and value observations; computes numeric or structural variation; classifies candidates as constant, drift, or rupture; and emits reproducible JSON, CSV, HTML, JSONL, and certificate outputs. It is a measurement tool only: constant means stability across supplied contexts, not universal semantic truth."
-keywords:
-  - "OMNIA-CONSTANT"
-  - "structural constancy"
-  - "candidate constants"
-  - "drift detection"
-  - "rupture detection"
-  - "observation contexts"
-  - "structural measurement"
-  - "OMNIA"
-  - "MB-X.01"
-  - "Logical Origin Node"
-  - "open source"
+type: software
